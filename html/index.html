@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="landinglogo">
+        <a href="http://localhost:3000/home">
+            <img id="landinglogo1" src="http://localhost:3000/image/Cu1" alt="">
+        </a>
+        <img id="landinglogo2" src="http://localhost:3000/image/Cu2">
+    </div>
+    <div>
+        <a class="underline" href="http://localhost:3000/home">
+        <img class="homebutton" id="homebutton1" src="http://localhost:3000/image/Home1">
+        <img class="homebutton" id="homebutton2" src="http://localhost:3000/image/Home2">
+        </a>
+    </div>
+</body>
+<style>
+.homebutton{
+    position: absolute;
+    margin-left: 43.6%;
+    margin-top: 35%;
+}
+
+#homebutton1{
+    z-index: 1;
+}
+
+#homebutton1:hover {
+    transition-property: left right;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    opacity: 0%;
+    z-index: -1;
+}
+
+#homebutton2:hover{
+    z-index: 2;
+    background-color: azure;
+}
+
+.underline {
+  display: inline;
+  overflow: hidden;
+}
+.underline:after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  left: 895px;
+  right: 100%;
+  bottom: 220px;
+  background: #4A2366;
+  height: 4px;
+  transition-property: left right;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-out;
+  max-width: 148px;
+}
+.underline:hover:after,
+.underline:focus:after,
+.underline:active:after {
+  right: 0;
+}
+
+.landinglogo{
+    position: relative;
+}
+#landinglogo1{
+    opacity: 30%;
+    position: absolute;
+    width: 9%;
+    margin-left: 45.47%;
+    margin-top: 14.24%;
+    z-index: 1;
+}
+
+#landinglogo1:hover {opacity: 100%;
+}
+
+#landinglogo2{
+    -webkit-animation: fadein 0.5s linear 1 normal forwards;
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    z-index: 0;
+}
+
+@-webkit-keyframes fadein{
+    from{
+       opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+body{
+    background-color: azure;
+} 
+</style>
+</html>
